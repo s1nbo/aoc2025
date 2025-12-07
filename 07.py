@@ -39,7 +39,7 @@ def two():
                 if char == 'S':
                     start = [idx, count]
                 elif char == '^':
-                    pos.append([idx, count])  # last element is used to track how often it has been hit
+                    pos.append([idx, count])
             count += 1
         
         beam_pos = defaultdict(int)
@@ -52,7 +52,6 @@ def two():
                         beam_pos[p[0] + 1] += beam_pos[p[0]]
                         ans += beam_pos[p[0]]
                         del beam_pos[p[0]]
-
 
     print(ans)
 
